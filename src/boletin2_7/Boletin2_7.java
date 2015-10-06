@@ -30,8 +30,13 @@ public class Boletin2_7 {
     float n = nominal.nextFloat();
     int t = años * 12;
     float i = interes/1200;
-    System.out.println("La renta sería " +(n*(Math.pow(1+i,t)*i))/(Math.pow((1+i),t)-1));
+    //System.out.println("La renta sería " +(n*(Math.pow(1+i,t)*i))/(Math.pow((1+i),t)-1));
+    double total = ((n*(Math.pow(1+i,t)*i))/(Math.pow((1+i),t)-1)) ;
     
+    System.out.printf("La renta sería %.2f %n",total); // printf se usa para redondear
+    // el %.2 son los decimales
+    // el f que es de tipo float
+           
     }
     
 }
