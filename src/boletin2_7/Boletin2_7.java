@@ -18,12 +18,20 @@ public class Boletin2_7 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    System.out.println("Introduce el lado del cuadrado");
-    Scanner ladoCuadrado = new Scanner(System.in);
-    float lado = ladoCuadrado.nextFloat();
-    double area = Math.pow(lado, 2); //Calculando la Potencia 
-    System.out.println ("El area total del cuadrado es " +area);        
-           
+    System.out.println("Se va a calcular la Renta mensual a pagar");
+    System.out.println("Introduce los años");
+    Scanner añosIntroducidos = new Scanner(System.in) ;
+    byte años = añosIntroducidos.nextByte();
+    System.out.println ("Introduce el interes anual en %");
+    Scanner interesIntroducido = new Scanner(System.in);
+    float interes = interesIntroducido.nextFloat();
+    System.out.println("Introduce el nominal del prestamo");
+    Scanner nominal = new Scanner(System.in);
+    float n = nominal.nextFloat();
+    int t = años * 12;
+    float i = interes/1200;
+    System.out.println("La renta sería " +(n*(Math.pow(1+i,t)*i))/(Math.pow((1+i),t)-1));
+    
     }
     
 }
